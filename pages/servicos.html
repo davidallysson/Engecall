@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ENGECALL</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!--<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function($) {
+		    $(".scroll").click(function(event){     
+		        event.preventDefault();
+		        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+		    });
+		});
+		</script>-->
+		<script src="../MaterialDesing/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+		<style type="text/css">
+			.list {
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-bottom: 50px;
+			}
+			.title_servico {
+				text-align: center;
+				margin-top: 40px;
+				font-size: 20px;
+				color: #1F5C1F;
+				font-weight: bold;
+			}
+			.titulo {
+				margin-top: 30px;
+				list-style: none;
+				color: #1F5C1F;
+			}
+			.titulo > ul li{
+				list-style: none;
+				margin-left: 30px;
+			}
+			.titulo > ul li:before{
+				content: '➧ ';
+			}
+			.menu{
+				position: fixed;
+				margin-top: 20px;
+
+			}
+			.text{
+				margin-left: 250px;
+				font-weight: bold;
+			}
+			.titulo > ul > li{
+				color: #000;
+				font-weight: initial;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="geral">
+			<div class="header">
+				<div class="row">
+				  	<div class="col-md-3">
+				  		<div class="logo"></div>
+				  	</div>
+				  	<div class="col-md-9">
+						<nav class="navbar navbar-default">
+						  <div class="container-fluid">
+						    <!-- Collect the nav links, forms, and other content for toggling -->
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						      	<ul class="nav navbar-nav" style="width: 100%;">
+							        <li class="col-md-2"><a href="../index.html">Home</a></li>
+							        <li class="col-md-2"><a href="empresa.html">Empresa</a></li>
+							        <li class="col-md-2"><a href="servicos.html">Serviços</a></li>
+							        <li class="col-md-2"><a href="contato.php">Contato</a></li>
+							        <li class="col-md-2"><a href="downloads.html">Download</a></li>
+						      	</ul>
+						    </div><!-- /.navbar-collapse -->
+						  </div><!-- /.container-fluid -->
+						</nav>
+					</div> <!--Fim da div col-md-9-->
+				</div> <!--Fim da div row-->
+			</div><!--Fim da div header-->
+			<div class="container">
+				<div class="row">
+					  <div class="col-md-3">
+				  		<div class="list-group">
+							<p class="list-group-item active">
+							Serviços de calibração
+							</p>
+							<a href="servicos.html#pressao" class="list-group-item">Grandeza Pressão</a>
+							<a href="servicos.html#temperatura" class="list-group-item">Grandeza Temperatura</a>
+							<a href="servicos.html#massa" class="list-group-item">Grandeza Massa</a>
+							<a href="servicos.html#dimensional" class="list-group-item">Grandeza Dimensional</a>
+							<a href="servicos.html#ensaios" class="list-group-item">Ensaios</a>
+							<p class="list-group-item active">
+							Serviços de Engenharia
+							</p>
+							<a href="servicos.html#nr13" class="list-group-item">Inspenção e ensaios de NR13</a>
+							<a href="servicos.html#testeHidrostatico" class="list-group-item">Teste hidrostático</a>
+							<a href="servicos.html#loop" class="list-group-item">Loop test</a>
+							<a href="servicos.html#comissionamento" class="list-group-item">Comissionamento</a>
+							<a href="servicos.html#laudos" class="list-group-item">Laudos técnicos</a>
+						</div><!--list-group-->
+			  		</div><!--Fim da div col-md-3-->
+			  		<div class="col-md-9">
+			  			<h1>Serviços</h1>
+						<div class="list">
+							<p class="title_servico">
+								Serviços de Calibração
+							</p>
+							
+							<ul>
+								<a id="pressao"></a>
+								<li class="titulo" style="font-weight: bold; ">Grandeza e Pressão
+									<ul>
+										<li>Autoclave</li>
+										<li>Calibrador de Pneus até 280 libras</li>
+										<li>Calibrador de Pressão Digital até 700 kgf/cm²</li>
+										<li>Calibrador Digital Pneumático 700 kgf/cm²</li>
+										<li>Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</li>
+										<li>Mano-Vacuômetro Digital</li>
+										<li>Manômetro Analógico</li>
+										<li>Manômetro Digital</li>
+										<li>Pressostato até 700 kgf/cm²</li>
+										<li>Transdutor de Pressão</li>
+										<li>Transmissor de Pressão</li>
+										<li>Vacuômetro Analógico</li>
+										<li>Vacuômetro Digital</li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<a id="temperatura"></a>
+								<li class="titulo" style="font-weight: bold; ">Grandeza Temperatura
+									<ul>
+										<li>Indicador de Temperatura</li>
+										<li>Pirômetro Ótico Infra-Vermelho</li>
+										<li>Registrador de Temperatura</li>
+										<li>Termômetro Bimetálico</li>
+										<li>Termômetro Digital</li>
+										<li>Termopar</li>
+										<li>Termostato</li>
+										<li>Termoresistência</li>
+										<li>Transmissor de Temperatura</li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<a id="massa"></a>
+								<li class="titulo" style="font-weight: bold; ">Grandeza Massa
+									<ul>
+										<li>Balança Digital</li>
+										<li>Balança Mecânica</li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<a id="dimensional"></a>
+								<li class="titulo" style="font-weight: bold; ">Grandeza Dimensional
+									<ul>
+										<li>Nível</li>
+										<li>Paquímetro</li>
+										<li>Placa de Orifício</li>
+										<li>Esquadro (Combinado, em L)</li>
+										<li>Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)</li>
+										<li>Clinômetro até 90º</li>
+										<li>Esquadro de Aço</li>
+										<li>Esquadro Combinado</li>
+										<li>Fita Perimétrica</li>
+										<li>Haste Padrão</li>
+										<li>Nível de Bolha</li>
+										<li>Nível de Precisão Linear</li>
+										<li>Paquímetro</li>
+										<li>Paquímetro de Profundidade</li>
+										<li>Padrão Escalonado com Tambor Micrométrico</li>
+										<li>Peneira Granulométrica</li>
+										<li>Penetrômetro</li>
+										<li>Pino Calibrado até 200 mm</li>
+										<li>Prisma até 300 mm</li>
+										<li>Régua Graduada</li>
+										<li>Transferidor de Graus (360º)</li>
+										<li>Trena</li>
+									</ul>
+								</li>
+							</ul> 
+							<ul>
+								<a id="ensaios"></a>
+								<li class="titulo" style="font-weight: bold; ">Ensaios
+									<ul>
+										<li>Válvula de Segurança</li>
+										<li>Válvula de Alivio</li>
+										<li>Pressostato</li>
+										<li>Termostato</li>
+									</ul>
+								</li>
+							</ul>
+							<p class="title_servico">
+								Serviços de Engenharia
+							</p>
+							<ul>
+								<a id="nr13"></a>
+								<li class="titulo" style="font-weight: bold; ">Inspeção de ensaios de NR13
+									<ul>
+										<li>Visual Externo</li>
+										<li>Visual Interno</li>
+										<li>Liquido Penetrante</li>
+										<li>Medição de camada de Tinta</li>
+										<li>Medição de Espessura</li>
+										<li>Teste Hidrostatico</li>
+									</ul>
+								</li>
+								<a id="testeHidrostatico"></a>
+								<li class="titulo" style="font-weight: bold; ">Teste Hidrostático Mangueiras/Mangotes</li>
+								<a id="loop"></a>
+								<li class="titulo" style="font-weight: bold; ">Loop Test</li>
+								<a id="comissionamento"></a>
+								<li class="titulo" style="font-weight: bold; ">Comissionamento</li>
+								<a id="laudos"></a>
+								<li class="titulo" style="font-weight: bold; ">Laudos Técnicos</li>
+							</ul>
+						</div>
+					</div> <!--Fim da div col-md-9-->
+				</div><!--Fim da div row-->
+			</div><!--Fim da div container-->
+	    </div><!--Fim da div geral-->
+	    <footer class="footer">
+	      <div class="containerFooter">
+		        <div class="row">
+					<div class="col-md-8">
+						<div class="info">
+					      	<p class="text-muted">ENGECALL</p>
+					      	<p class="developers">Desenvolvido por: DO-JO</p>
+					    </div>
+					</div>
+				  <div class="col-md-4">
+					<div class="contact">
+				      	<p>Rua Amambai Nº 335 Bairro Neópolis</p> 
+				      	<p>Natal/RN CEP: 59080-260</p>
+				      	<p>Fone: (84) 3217-3830 </p> 
+				      	<p>Fone: (84) 99908-4494</p>
+						<p>CNPJ:14.422.270/0001-03</p>
+						<p>e-mail: engecall@natalab.com.br</p>
+			    	</div>
+				  </div>
+				</div>
+	      </div>
+	    </footer>
+	</body>
+</html>
