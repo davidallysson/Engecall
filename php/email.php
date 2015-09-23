@@ -8,8 +8,8 @@ if( isset($_POST['motivo']) ) {
 	$mail->IsSMTP(); 
 	$mail->Host = "smtp.gmail.com";
 	$mail->SMTPAuth = true;
-	$mail->Username = 'davidmoreirainformatica@gmail.com';
-	$mail->Password = 'Rasengan';
+	$mail->Username = '@gmail.com';
+	$mail->Password = '';
 
 	$mail->From = $_POST["email"]; 
 	$mail->FromName = $_POST["nome"];
@@ -29,7 +29,7 @@ if( isset($_POST['motivo']) ) {
 
 	$securimage = new Securimage();
 	if ($securimage->check($_POST['captcha_code']) == false) {		
-		echo "<div class=\"alert alert-danger\" style=\"display: table;\"> O código não foi digitado corretamente. </div>";
+		echo "<div class=\"alert alert-danger\" style=\"margin-top: 50px;\"> O código não foi digitado corretamente. </div>";
 	}
 	else {
 
@@ -39,10 +39,10 @@ if( isset($_POST['motivo']) ) {
 		$mail->ClearAttachments();
 		
 		if ($enviado) {
-			echo "<div class=\"alert alert-success\" style=\"display: table;\"> Email enviado com sucesso. </div>";
+			echo "<div class=\"alert alert-success\" style=\"margin-top: 50px;\"> Email enviado com sucesso. </div>";
 		} else {
-		  	echo "<div class=\"alert alert-danger\" style=\"display: table;\"> Não foi possível enviar um email. </div>";
-		  	echo "<div class=\"alert alert-danger\" style=\"display: table;\"> " . $mail->ErrorInfo . " </div>";
+		  	echo "<div class=\"alert alert-danger\" style=\"margin-top: 50px;\"> Não foi possível enviar um email. </div>";
+		  	echo "<div class=\"alert alert-danger\" style=\"margin-top: 50px;\"> " . $mail->ErrorInfo . " </div>";
 		}
 	}
 
