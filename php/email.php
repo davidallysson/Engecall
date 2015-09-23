@@ -8,8 +8,8 @@ if( isset($_POST['motivo']) ) {
 	$mail->IsSMTP(); 
 	$mail->Host = "smtp.gmail.com";
 	$mail->SMTPAuth = true;
-	$mail->Username = '@gmail.com';
-	$mail->Password = '';
+	$mail->Username = 'davidmoreirainformatica@gmail.com';
+	$mail->Password = 'Rasengan';
 
 	$mail->From = $_POST["email"]; 
 	$mail->FromName = $_POST["nome"];

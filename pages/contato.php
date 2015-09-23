@@ -11,9 +11,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/jquery.maskedinput.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
 		
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap-select.css">
 
@@ -109,7 +111,7 @@
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
 									<label class="labelInput">Telefone:</label>
-									<input name="telefone" type="text" pattern="[0-9]+$" class="form-control" placeholder="Telefone (Apenas números)" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
+									<input id="telefone" name="telefone" type="text" class="form-control" placeholder="Telefone" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
 									<label class="labelInput label_cpf_cnpj">CPF / CNPJ:</label>
@@ -158,4 +160,9 @@
 	    	</div>
 	    </footer>
 	</body>
+	<script type="text/javascript">
+	jQuery(function($){
+	   $("#telefone").mask("(99) 9999-9999");
+	});
+	</script>
 </html>
