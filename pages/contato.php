@@ -93,7 +93,7 @@
 				  			<div class="row" style="width: 80%; margin: 50px auto;">
 					  			<div class="col-md-12 input-group">
 									<label class="labelInput">Nome:</label>
-									<input name="nome" type="text" pattern="[a-zA-Z]+$" class="form-control" placeholder="Nome completo" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
+									<input name="nome" type="text" pattern="[a-zA-ZÀ-ú\\ ]+$" class="form-control" placeholder="Nome completo" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
 								</div>
 								<div class="col-md-12 input-group">
 									<label class="labelInput">E-mail:</label>
