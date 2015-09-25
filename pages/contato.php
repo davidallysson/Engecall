@@ -19,14 +19,7 @@
 		
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap-select.css">
 
-        <script src="../js/valida_cpf_cnpj.js"></script>
-		<script src="../js/validador.js"></script>
-		
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
-
-		<script type="text/javascript">
-			 $('.selectpicker').selectpicker();
-		</script>
 
 		<style type="text/css">
         	.captcha{
@@ -58,6 +51,7 @@
 							        <li class="col-md-2"><a href="empresa.html">Empresa</a></li>
 							        <li class="col-md-2"><a href="servicos.html">Serviços</a></li>
 							        <li class="col-md-2"><a href="contato.php">Contato</a></li>
+							        <li class="col-md-2"><a href="orcamento.php">Orçamento</a></li>
 							        <li class="col-md-2"><a href="downloads.html">Download</a></li>
 						      	</ul>
 						    </div><!-- /.navbar-collapse -->
@@ -106,16 +100,8 @@
 									<input name="assunto" type="text" class="form-control" placeholder="Por que entrar em contato?" aria-describedby="sizing-addon2" required="required" maxlength="100"/>
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput">Motivo: (Opicional)</label>
-									<input name="motivo" type="text" class="form-control" placeholder="Orçamento/Reclamação/Sugestão" aria-describedby="sizing-addon2" maxlength="50"/>
-								</div>
-								<div class="col-md-6 input-group" style="float: left;">
 									<label class="labelInput">Telefone:</label>
 									<input id="telefone" name="telefone" type="text" class="form-control" placeholder="Telefone" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
-								</div>
-								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput label_cpf_cnpj">CPF / CNPJ:</label>
-									<input name="cpf_cnpj" type="text" pattern="[0-9]+$" class="form-control input_cpf_cnpj" placeholder="CPF ou CNPJ (Apenas números)" aria-describedby="sizing-addon2" required="required" maxlength="14"/>
 								</div>
 								<div class="col-md-12 input-group">
 									<label class="labelInput">Mensagem:</label>
