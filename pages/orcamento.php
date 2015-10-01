@@ -34,6 +34,27 @@
         		width: 19px;
     			height: 25px;
         	}
+        	.panel-default>.panel-heading{
+        		background-image: -webkit-linear-gradient(top,transparent 0,transparent 100%);
+			    background-image: -o-linear-gradient(top,transparent 0,transparent 100%);
+			    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+			    background-image: linear-gradient(to bottom,transparent 0,transparent 100%);
+			    background-color: transparent;
+        	}
+        	.panel-default{
+        		border-color:transparent;
+        	}
+        	h4>a:focus, h4>a:hover {
+        		text-decoration: none;
+        	}
+        	.panel{
+        		margin-bottom: 0px;
+        		border: none;
+        	}
+        	.panel-group{
+        		height: 500px;
+        		overflow-y: scroll;
+        	}
 		</style>
 </head>
 <body>
@@ -86,19 +107,36 @@
 			  		</div><!--Fim da div col-md-3-->
 			  		<div class="col-md-9">
 			  			<h1 style="margin-bottom: -25px;">Orçamento</h1>
-			  			<form action="contato.php" onsubmit="return cpf()" method="post">
+			  			<form action="//formspree.io/julia.xavier.campos@gmail.com" onsubmit="return cpf()" method="post">
 			  				<?php include('../php/email.php'); ?>
 				  			<div class="row" style="width: 80%; margin: 50px auto;">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+				  				<div class="col-md-12 input-group">
+									<label class="labelInput">Nome:</label>
+									<input name="nome" type="text" pattern="[a-zA-ZÀ-ú\\ ]+$" class="form-control" placeholder="Nome completo" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
+								</div>
+								<div class="col-md-12 input-group">
+									<label class="labelInput">E-mail:</label>
+									<input name="_replyto" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
+								</div>
+								<div class="col-md-6 input-group" style="float: left;">
+									<label class="labelInput">Telefone:</label>
+									<input id="telefone" name="telefone" type="text" class="form-control" placeholder="Telefone" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
+								</div>
+								<div class="col-md-6 input-group" style="float: left;">
+									<label class="labelInput label_cpf_cnpj">CPF / CNPJ:</label>
+									<input name="cpf_cnpj" type="text" pattern="[0-9]+$" class="form-control input_cpf_cnpj" placeholder="CPF ou CNPJ (Apenas números)" aria-describedby="sizing-addon2" required="required" maxlength="14"/>
+								</div>
+							</div>
+							<div class="row" style="width: 80%; margin: 50px auto;">
+								<div class="panel-group">
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingOne">
 								      <h4 class="panel-title">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 								          Grandeza e Pressão
-								        </a>
 								      </h4>
 								    </div>
-								    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								    <div id="collapseOne" >
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -222,17 +260,42 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingTwo">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								          Grandeza Temperatura
-								        </a>
+								        Grandeza Temperatura
 								      </h4>
 								    </div>
-								    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								    <div id="collapseTwo">
 								      <div class="panel-body">
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" name="checkTemperatura" id="" class="inputCheckbox">
 													<label for="">Indicador de Temperatura</label>
+												</div>
+												<div class="col-sm-2">
+													<input name="qtdTemperatura" class="form-control col-md-1" for="" type="number">
+												</div>
+											</div>
+											<div class="input-group col-sm-12">
+							  					<div class="col-sm-10">
+													<input type="checkbox" name="checkTemperatura" id="" class="inputCheckbox">
+													<label for="">Pirômetro Ótico Infra-Vermelho</label>
+												</div>
+												<div class="col-sm-2">
+													<input name="qtdTemperatura" class="form-control col-md-1" for="" type="number">
+												</div>
+											</div>
+											<div class="input-group col-sm-12">
+							  					<div class="col-sm-10">
+													<input type="checkbox" name="checkTemperatura" id="" class="inputCheckbox">
+													<label for="">Registrador de Temperatura</label>
+												</div>
+												<div class="col-sm-2">
+													<input name="qtdTemperatura" class="form-control col-md-1" for="" type="number">
+												</div>
+											</div>
+											<div class="input-group col-sm-12">
+							  					<div class="col-sm-10">
+													<input type="checkbox" name="checkTemperatura" id="" class="inputCheckbox">
+													<label for="">Termômetro Bimetálico</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="qtdTemperatura" class="form-control col-md-1" for="" type="number">
@@ -276,7 +339,8 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" name="checkTransmissorTemperatura" id="" class="inputCheckbox"><label for="">Transmissor de Temperatura</label>
+													<input type="checkbox" name="checkTransmissorTemperatura" id="" class="inputCheckbox">
+													<label for="">Transmissor de Temperatura</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="qtdTransmissorTemperatura" class="form-control col-md-1" for="" type="number">
@@ -288,12 +352,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingThree">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								          Grandeza Massa
-								        </a>
+								        Grandeza Massa
 								      </h4>
 								    </div>
-								    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								    <div id="collapseThree">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -317,12 +379,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingFour">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-								          Grandeza Dimensional
-								        </a>
+								        Grandeza Dimensional
 								      </h4>
 								    </div>
-								    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								    <div id="collapseFour">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -424,7 +484,8 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" name="checkPrecisao" id="" class="inputCheckbox"><label for="">Nível de Precisão Linear</label>
+													<input type="checkbox" name="checkPrecisao" id="" class="inputCheckbox">
+													<label for="">Nível de Precisão Linear</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="qtdPrecisao" class="form-control col-md-1" for="" type="number">
@@ -468,7 +529,8 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" name="checkPenetrometro" id="" class="inputCheckbox"><label for="">Penetrômetro</label>
+													<input type="checkbox" name="checkPenetrometro" id="" class="inputCheckbox">
+													<label for="">Penetrômetro</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="qtdPenetrometro" class="form-control col-md-1" for="" type="number">
@@ -522,12 +584,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingFive">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-								          Ensaios
-								        </a>
+								        Ensaios
 								      </h4>
 								    </div>
-								    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+								    <div id="collapseFive">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -567,12 +627,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingSix">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-								          Inspeção de ensaios de NR13
-								        </a>
+								        Inspeção de ensaios de NR13
 								      </h4>
 								    </div>
-								    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+								    <div id="collapseSix">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -629,12 +687,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingSeven">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-								          Teste Hidrostático Mangueiras/Mangotes
-								        </a>
+								        Teste Hidrostático Mangueiras/Mangotes
 								      </h4>
 								    </div>
-								    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+								    <div id="collapseSeven">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -650,12 +706,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingEigth">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEigth" aria-expanded="false" aria-controls="collapseEigth">
-								          Loop Test
-								        </a>
+								        Loop Test
 								      </h4>
 								    </div>
-								    <div id="collapseEigth" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEigth">
+								    <div id="collapseEigth">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -671,12 +725,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingNine">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-								          Comissionamento
-								        </a>
+								        Comissionamento
 								      </h4>
 								    </div>
-								    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+								    <div id="collapseNine">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -693,12 +745,10 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingTen">
 								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-								          Laudos Técnicos
-								        </a>
+								        Laudos Técnicos
 								      </h4>
 								    </div>
-								    <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+								    <div id="collapseTen">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
@@ -713,22 +763,6 @@
 								    </div>
 								  </div>
 								</div>
-					  			<div class="col-md-12 input-group">
-									<label class="labelInput">Nome:</label>
-									<input name="nome" type="text" pattern="[a-zA-ZÀ-ú\\ ]+$" class="form-control" placeholder="Nome completo" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
-								</div>
-								<div class="col-md-12 input-group">
-									<label class="labelInput">E-mail:</label>
-									<input name="email" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
-								</div>
-								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput">Telefone:</label>
-									<input id="telefone" name="telefone" type="text" class="form-control" placeholder="Telefone" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
-								</div>
-								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput label_cpf_cnpj">CPF / CNPJ:</label>
-									<input name="cpf_cnpj" type="text" pattern="[0-9]+$" class="form-control input_cpf_cnpj" placeholder="CPF ou CNPJ (Apenas números)" aria-describedby="sizing-addon2" required="required" maxlength="14"/>
-								</div>
 								<div class="captcha input-group col-md-5">
 								<label class="labelInput" style="width: 100%; text-align: center;">Digite o Captcha para continuar:</label><br />
 										<img id="captcha" src="../securimage/securimage_show.php" />
@@ -739,7 +773,6 @@
 								</div>
 								<input type="submit" value="Enviar" class="btn btn-danger"/>
 							</div>
-
 						</form>
 					</div> <!--Fim da div col-md-9-->
 				</div><!--Fim da div row-->

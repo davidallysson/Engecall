@@ -84,7 +84,7 @@
 			  		</div><!--Fim da div col-md-3-->
 			  		<div class="col-md-9">
 			  			<h1 style="margin-bottom: -25px;">Contato</h1>
-			  			<form action="contato.php" onsubmit="return cpf()" method="post">
+			  			<form action="//formspree.io/julia.xavier.campos@gmail.com" onsubmit="return cpf()" method="post">
 			  				<?php include('../php/email.php'); ?>
 				  			<div class="row" style="width: 80%; margin: 50px auto;">
 					  			<div class="col-md-12 input-group">
@@ -93,7 +93,7 @@
 								</div>
 								<div class="col-md-12 input-group">
 									<label class="labelInput">E-mail:</label>
-									<input name="email" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
+									<input name="_replyto" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
 									<label class="labelInput">Assunto:</label>
@@ -115,6 +115,8 @@
 										</a>
 										<input required class="form-control" type="text" placeholder="Digite o texto a cima" name="captcha_code" maxlength="6"/>
 								</div>
+								<input name="_next" type="hidden" value="Engecall/index.html" />
+								
 								<input type="submit" value="Enviar" class="btn btn-danger"/>
 							</div>
 

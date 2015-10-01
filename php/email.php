@@ -8,13 +8,13 @@ if( isset($_POST['motivo']) ) {
 	$mail->IsSMTP(); 
 	$mail->Host = "smtp.gmail.com";
 	$mail->SMTPAuth = true;
-	$mail->Username = 'davidmoreirainformatica@gmail.com';
-	$mail->Password = 'Rasengan';
+	$mail->Username = 'julia.xavier.campos@gmail.com';
+	$mail->Password = '20121164010180';
 
 	$mail->From = $_POST["email"]; 
 	$mail->FromName = $_POST["nome"];
 	//Email da Engecall que receberá os emails
-	$mail->AddAddress('davidmoreirainformatica@gmail.com');
+	$mail->AddAddress('julia.xavier.campos@gmail.com');
 
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8';
