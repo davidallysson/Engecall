@@ -8,28 +8,17 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
+		
 		<script src="../js/jquery-1.9.1.min.js"></script>
-		<script src="../js/jquery.maskedinput.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		
+
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap-select.css">
 
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
-
 		<style type="text/css">
-        	.captcha{
-        		padding-left: 25%;
-        		margin: 0 auto;
-        	}
-        	.btn-danger{
-        		width: 100px;
-			    float: right;
-			    margin-top: 20px;
-        	}
-        	.navbar-default .navbar-toggle{
+			.navbar-default .navbar-toggle{
 				border-color: transparent;
 			}
 			.navbar-default .navbar-toggle .icon-bar{
@@ -102,40 +91,7 @@
 						</div><!--list-group-->
 			  		</div><!--Fim da div col-md-3-->
 			  		<div class="col-md-9">
-			  			<h1 style="margin-bottom: -25px;">Contato</h1>
-			  			<form action="//formspree.io/davidmoreirainformatica@gmail.com" onsubmit="return cpf()" method="post">
-				  			<div class="row" style="width: 80%; margin: 50px auto;">
-					  			<div class="col-md-12 input-group">
-									<label class="labelInput">Nome:</label>
-									<input name="Nome" type="text" pattern="[a-zA-ZÀ-ú\\ ]+$" class="form-control" placeholder="Nome completo" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
-								</div>
-								<div class="col-md-12 input-group">
-									<label class="labelInput">E-mail:</label>
-									<input name="_replyto" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
-								</div>
-								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput">Assunto:</label>
-									<input name="Assunto" type="text" class="form-control" placeholder="Por que entrar em contato?" aria-describedby="sizing-addon2" required="required" maxlength="100"/>
-								</div>
-								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput">Telefone:</label>
-									<input id="Telefone" name="Telefone" type="text" class="form-control" placeholder="Telefone" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
-								</div>
-								<div class="col-md-12 input-group">
-									<label class="labelInput">Mensagem:</label>
-									<textarea name="Conteudo" class="form-control" rows="5" placeholder="Conteudo (1000 caracteres disponíveis)" maxlength="1000"></textarea>
-								</div>
-								<!-- Verifica se algum robô automático preencheu esse formulário / Substitui Captcha -->
-								<input type="text" name="_gotcha" style="display: none" />
-								<!-- Define um assunto padrão para os emails enviados -->
-								<input type="hidden" name="_subject" value="Email de Contato" />
-								<!-- Redirecionar para outra página [A URL é diferente assim mesmo] -->
-								<input type="hidden" name="_next" value="Engecall/pages/sucesso.html" />
-								
-								<input type="submit" value="Enviar" class="btn btn-danger"/>
-							</div>
-
-						</form>
+			  			<h1 style="padding-top: 19%; padding-bottom: 19%;">Email enviado com sucesso!</h1>
 					</div> <!--Fim da div col-md-9-->
 				</div><!--Fim da div row-->
 			</div><!--Fim da div container-->
@@ -163,9 +119,4 @@
 	    	</div>
 	    </footer>
 	</body>
-	<script type="text/javascript">
-	jQuery(function($){
-	   $("#Telefone").mask("(99) 99999-9999");
-	});
-	</script>
 </html>
