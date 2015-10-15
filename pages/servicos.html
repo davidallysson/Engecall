@@ -19,7 +19,7 @@
 			.title_servico {
 				text-align: center;
 				margin-top: 40px;
-				font-size: 20px;
+				font-size: 23px;
 				color: #1F5C1F;
 				font-weight: bold;
 			}
@@ -27,13 +27,6 @@
 				margin-top: 30px;
 				list-style: none;
 				color: #1F5C1F;
-			}
-			.titulo > ul li{
-				list-style: none;
-				margin-left: 30px;
-			}
-			.titulo > ul li:before{
-				content: '➧ ';
 			}
 			.menu{
 				position: fixed;
@@ -59,6 +52,34 @@
 			}
 			.navbar-default .navbar-toggle:hover .navbar-default .navbar-toggle:focus{
 				border-color: transparent;
+			}
+			.panel-default{
+				border:transparent;
+			}
+			.panel-default>.panel-heading{
+				background-image: none;
+			}
+			.panel-default>.panel-heading{
+				background-color: transparent;
+				color: #1F5C1F;
+			}
+			a:focus{
+				text-decoration: none;
+			}
+			a:hover{
+				text-decoration: none;
+			}
+			.panel-title{
+				font-weight: bold;
+			}
+			.panel-body ul li{
+				list-style: none;
+				margin-left: 30px;
+			}
+			#infor{
+				text-align: center;
+			    color: #1F5C1F;
+			    font-size: 17px;
 			}
 		</style>
 	</head>
@@ -105,137 +126,241 @@
 							<p class="list-group-item active">
 							Serviços de Calibração
 							</p>
-							<a href="servicos.html#pressao" class="list-group-item">Grandeza Pressão</a>
-							<a href="servicos.html#temperatura" class="list-group-item">Grandeza Temperatura</a>
-							<a href="servicos.html#massa" class="list-group-item">Grandeza Massa</a>
-							<a href="servicos.html#dimensional" class="list-group-item">Grandeza Dimensional</a>
-							<a href="servicos.html#ensaios" class="list-group-item">Ensaios</a>
+							<a href="servicos.html" class="list-group-item">Grandeza Pressão</a>
+							<a href="servicos.html" class="list-group-item">Grandeza Temperatura</a>
+							<a href="servicos.html" class="list-group-item">Grandeza Massa</a>
+							<a href="servicos.html" class="list-group-item">Grandeza Dimensional</a>
+							<a href="servicos.html" class="list-group-item">Ensaios</a>
 							<p class="list-group-item active">
 							Serviços de Engenharia
 							</p>
-							<a href="servicos.html#nr13" class="list-group-item">Inspenção e ensaios de NR13</a>
-							<a href="servicos.html#testeHidrostatico" class="list-group-item">Teste hidrostático</a>
-							<a href="servicos.html#loop" class="list-group-item">Loop test</a>
-							<a href="servicos.html#comissionamento" class="list-group-item">Comissionamento</a>
-							<a href="servicos.html#laudos" class="list-group-item">Laudos técnicos</a>
+							<a href="servicos.html" class="list-group-item">Inspenção e ensaios de NR13</a>
+							<a href="servicos.html" class="list-group-item">Teste hidrostático</a>
+							<a href="servicos.html" class="list-group-item">Loop test</a>
+							<a href="servicos.html" class="list-group-item">Comissionamento</a>
+							<a href="servicos.html" class="list-group-item">Laudos técnicos</a>
 						</div><!--list-group-->
 			  		</div><!--Fim da div col-md-3-->
 			  		<div class="col-md-9">
 			  			<h1>Serviços</h1>
-						<div class="list">
-							<p class="title_servico">
+			  			<p id="infor">Clique nos serviços e veja mais detalhes.</p>
+			  			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  			<p class="title_servico">
 								Serviços de Calibração
 							</p>
-							
-							<ul>
-								<a id="pressao"></a>
-								<li class="titulo" style="font-weight: bold; ">Grandeza e Pressão
-									<ul>
-										<li>Autoclave</li>
-										<li>Calibrador de Pneus até 280 libras</li>
-										<li>Calibrador de Pressão Digital até 700 kgf/cm²</li>
-										<li>Calibrador Digital Pneumático 700 kgf/cm²</li>
-										<li>Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</li>
-										<li>Mano-Vacuômetro Digital</li>
-										<li>Manômetro Analógico</li>
-										<li>Manômetro Digital</li>
-										<li>Pressostato até 700 kgf/cm²</li>
-										<li>Transdutor de Pressão</li>
-										<li>Transmissor de Pressão</li>
-										<li>Vacuômetro Analógico</li>
-										<li>Vacuômetro Digital</li>
-									</ul>
-								</li>
-							</ul>
-							<ul>
-								<a id="temperatura"></a>
-								<li class="titulo" style="font-weight: bold; ">Grandeza Temperatura
-									<ul>
-										<li>Indicador de Temperatura</li>
-										<li>Pirômetro Ótico Infra-Vermelho</li>
-										<li>Registrador de Temperatura</li>
-										<li>Termômetro Bimetálico</li>
-										<li>Termômetro Digital</li>
-										<li>Termopar</li>
-										<li>Termostato</li>
-										<li>Termoresistência</li>
-										<li>Transmissor de Temperatura</li>
-									</ul>
-								</li>
-							</ul>
-							<ul>
-								<a id="massa"></a>
-								<li class="titulo" style="font-weight: bold; ">Grandeza Massa
-									<ul>
-										<li>Balança Digital</li>
-										<li>Balança Mecânica</li>
-									</ul>
-								</li>
-							</ul>
-							<ul>
-								<a id="dimensional"></a>
-								<li class="titulo" style="font-weight: bold; ">Grandeza Dimensional
-									<ul>
-										<li>Nível</li>
-										<li>Paquímetro</li>
-										<li>Placa de Orifício</li>
-										<li>Esquadro (Combinado, em L)</li>
-										<li>Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)</li>
-										<li>Clinômetro até 90º</li>
-										<li>Esquadro de Aço</li>
-										<li>Esquadro Combinado</li>
-										<li>Fita Perimétrica</li>
-										<li>Haste Padrão</li>
-										<li>Nível de Bolha</li>
-										<li>Nível de Precisão Linear</li>
-										<li>Paquímetro</li>
-										<li>Paquímetro de Profundidade</li>
-										<li>Padrão Escalonado com Tambor Micrométrico</li>
-										<li>Peneira Granulométrica</li>
-										<li>Penetrômetro</li>
-										<li>Pino Calibrado até 200 mm</li>
-										<li>Prisma até 300 mm</li>
-										<li>Régua Graduada</li>
-										<li>Transferidor de Graus (360º)</li>
-										<li>Trena</li>
-									</ul>
-								</li>
-							</ul> 
-							<ul>
-								<a id="ensaios"></a>
-								<li class="titulo" style="font-weight: bold; ">Ensaios
-									<ul>
-										<li>Válvula de Segurança</li>
-										<li>Válvula de Alivio</li>
-										<li>Pressostato</li>
-										<li>Termostato</li>
-									</ul>
-								</li>
-							</ul>
+							<div class="panel panel-default">
+						    	<div class="panel-heading" role="tab" id="headingOne">
+						      		<h4 class="panel-title">
+						        		<a role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaPressao" aria-expanded="true" aria-controls="grandezaPressao">
+						         			Grandeza e Pressão
+						        		</a>
+						      		</h4>
+						    	</div>
+						    	<div id="grandezaPressao" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Autoclave</li>
+											<li>Calibrador de Pneus até 280 libras</li>
+											<li>Calibrador de Pressão Digital até 700 kgf/cm²</li>
+											<li>Calibrador Digital Pneumático 700 kgf/cm²</li>
+											<li>Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</li>
+											<li>Mano-Vacuômetro Digital</li>
+											<li>Manômetro Analógico</li>
+											<li>Manômetro Digital</li>
+											<li>Pressostato até 700 kgf/cm²</li>
+											<li>Transdutor de Pressão</li>
+											<li>Transmissor de Pressão</li>
+											<li>Vacuômetro Analógico</li>
+											<li>Vacuômetro Digital</li>
+										</ul>
+							      	</div>
+							    </div>
+							</div>
+							<div class="panel panel-default">
+						    	<div class="panel-heading" role="tab" id="headingTwo">
+							      	<h4 class="panel-title">
+							        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaTemperatura" aria-expanded="false" aria-controls="grandezaTemperatura">
+							          		Grandeza Temperatura
+							        	</a>
+							      	</h4>
+							    </div>
+						    	<div id="grandezaTemperatura" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      		<div class="panel-body">
+							        	<ul>
+											<li>Indicador de Temperatura</li>
+											<li>Pirômetro Ótico Infra-Vermelho</li>
+											<li>Registrador de Temperatura</li>
+											<li>Termômetro Bimetálico</li>
+											<li>Termômetro Digital</li>
+											<li>Termopar</li>
+											<li>Termostato</li>
+											<li>Termoresistência</li>
+											<li>Transmissor de Temperatura</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="panel panel-default">
+						   		<div class="panel-heading" role="tab" id="headingThree">
+						      		<h4 class="panel-title">
+								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaMassa" aria-expanded="false" aria-controls="grandezaMassa">
+								          	Grandeza Massa
+								        </a>
+								    </h4>
+						    	</div>
+						    	<div id="grandezaMassa" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Balança Digital</li>
+											<li>Balança Mecânica</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="panel panel-default">
+						   		<div class="panel-heading" role="tab" id="headingThree">
+						      		<h4 class="panel-title">
+								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaDimensional" aria-expanded="false" aria-controls="grandezaDimensional">
+								          	Grandeza Dimensional
+								        </a>
+								    </h4>
+						    	</div>
+						    	<div id="grandezaDimensional" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Nível</li>
+											<li>Paquímetro</li>
+											<li>Placa de Orifício</li>
+											<li>Esquadro (Combinado, em L)</li>
+											<li>Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)</li>
+											<li>Clinômetro até 90º</li>
+											<li>Esquadro de Aço</li>
+											<li>Esquadro Combinado</li>
+											<li>Fita Perimétrica</li>
+											<li>Haste Padrão</li>
+											<li>Nível de Bolha</li>
+											<li>Nível de Precisão Linear</li>
+											<li>Paquímetro</li>
+											<li>Paquímetro de Profundidade</li>
+											<li>Padrão Escalonado com Tambor Micrométrico</li>
+											<li>Peneira Granulométrica</li>
+											<li>Penetrômetro</li>
+											<li>Pino Calibrado até 200 mm</li>
+											<li>Prisma até 300 mm</li>
+											<li>Régua Graduada</li>
+											<li>Transferidor de Graus (360º)</li>
+											<li>Trena</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="panel panel-default">
+						   		<div class="panel-heading" role="tab" id="headingThree">
+						      		<h4 class="panel-title">
+								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#ensaios" aria-expanded="false" aria-controls="ensaios">
+								          	Ensaios
+								        </a>
+								    </h4>
+						    	</div>
+						    	<div id="ensaios" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Válvula de Segurança</li>
+											<li>Válvula de Alivio</li>
+											<li>Pressostato</li>
+											<li>Termostato</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
 							<p class="title_servico">
 								Serviços de Engenharia
 							</p>
-							<ul>
-								<a id="nr13"></a>
-								<li class="titulo" style="font-weight: bold; ">Inspeção de ensaios de NR13
-									<ul>
-										<li>Visual Externo</li>
-										<li>Visual Interno</li>
-										<li>Liquido Penetrante</li>
-										<li>Medição de camada de Tinta</li>
-										<li>Medição de Espessura</li>
-										<li>Teste Hidrostatico</li>
-									</ul>
-								</li>
-								<a id="testeHidrostatico"></a>
-								<li class="titulo" style="font-weight: bold; ">Teste Hidrostático Mangueiras/Mangotes</li>
-								<a id="loop"></a>
-								<li class="titulo" style="font-weight: bold; ">Loop Test</li>
-								<a id="comissionamento"></a>
-								<li class="titulo" style="font-weight: bold; ">Comissionamento</li>
-								<a id="laudos"></a>
-								<li class="titulo" style="font-weight: bold; ">Laudos Técnicos</li>
-							</ul>
+							<div class="panel panel-default">
+						    	<div class="panel-heading" role="tab" id="headingNR13">
+						      		<h4 class="panel-title">
+						        		<a role="button" data-toggle="collapse" data-parent="#accordion" href="#nr13" aria-expanded="true" aria-controls="nr13">
+						         			Inspeção de ensaios de NR13
+						        		</a>
+						      		</h4>
+						    	</div>
+						    	<div id="nr13" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingNR13">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Visual Externo</li>
+											<li>Visual Interno</li>
+											<li>Liquido Penetrante</li>
+											<li>Medição de camada de Tinta</li>
+											<li>Medição de Espessura</li>
+											<li>Teste Hidrostatico</li>
+										</ul>
+							      	</div>
+							    </div>
+							</div>
+							<div class="panel panel-default">
+						    	<div class="panel-heading" role="tab" id="headingHidrostático">
+							      	<h4 class="panel-title">
+							        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#testeHidrostatico" aria-expanded="false" aria-controls="testeHidrostatico">
+							          		Teste Hidrostático Mangueiras/Mangotes
+							        	</a>
+							      	</h4>
+							    </div>
+						    	<div id="testeHidrostatico" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingHidrostático">
+						      		<div class="panel-body">
+							        	<ul>
+											<li>Teste Hidrostático Mangueiras/Mangotes</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="panel panel-default">
+						   		<div class="panel-heading" role="tab" id="headingLoop">
+						      		<h4 class="panel-title">
+								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#loopTest" aria-expanded="false" aria-controls="loopTest">
+								          	Loop Test
+								        </a>
+								    </h4>
+						    	</div>
+						    	<div id="loopTest" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLoop">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Loop Test</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="panel panel-default">
+						   		<div class="panel-heading" role="tab" id="headingComissionamento">
+						      		<h4 class="panel-title">
+								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#comissionamento" aria-expanded="false" aria-controls="comissionamento">
+								          	Comissionamento
+								        </a>
+								    </h4>
+						    	</div>
+						    	<div id="comissionamento" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingComissionamento">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Comissionamento</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="panel panel-default">
+						   		<div class="panel-heading" role="tab" id="headingLaudos">
+						      		<h4 class="panel-title">
+								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#laudos" aria-expanded="false" aria-controls="laudos">
+								          	Laudos Técnicos
+								        </a>
+								    </h4>
+						    	</div>
+						    	<div id="laudos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLaudos">
+						      		<div class="panel-body">
+						        		<ul>
+											<li>Laudos Técnicos</li>
+										</ul>
+						      		</div>
+						    	</div>
+						  	</div>
 						</div>
 					</div> <!--Fim da div col-md-9-->
 				</div><!--Fim da div row-->
