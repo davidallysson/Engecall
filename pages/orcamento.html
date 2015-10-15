@@ -2,17 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Orçamento</title>
-	<!-- Latest compiled and minified CSS -->
+	<link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon"/>
+	<title>ENGECALL . ORÇAMENTO</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
 	<script src="../js/jquery-1.9.1.min.js"></script>
-	<script src="../js/jquery.maskedinput.min.js"></script>
-
-	<!-- Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="../js/jquery.mask.min.js"/></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="../js/valida_cpf_cnpj.js"></script>
 	<script src="../js/validador.js"></script>
@@ -72,8 +67,9 @@
 		</style>
 </head>
 <body>
-	<div class="geral">
-			<div class="header">
+	<div>
+			<div class="container" style="background-color: transparent; -webkit-box-shadow: none; box-shadow: none;">
+				<div class="telefone"><span class="green";> Telefone: (84)</span><span class="red">3217-3830</span></div>
 				<div class="row">
 				  	<div class="col-md-3">
 				  		<div class="logo"></div>
@@ -98,7 +94,7 @@
 							        <li class="col-md-2"><a href="servicos.html">Serviços</a></li>
 							        <li class="col-md-2"><a href="contato.html">Contato</a></li>
 							        <li class="col-md-2"><a href="orcamento.html">Orçamento</a></li>
-							        <li class="col-md-2"><a href="downloads.html">Download</a></li>
+							        <li class="col-md-2"><a href="construcao.html">Download</a></li>
 						      	</ul>
 						    </div><!-- /.navbar-collapse -->
 						  </div><!-- /.container-fluid -->
@@ -141,8 +137,9 @@
 									<input name="_replyto" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
-									<label class="labelInput">Telefone:</label>
-									<input id="Telefone" name="Telefone" type="text" class="form-control" placeholder="Telefone" aria-describedby="sizing-addon2" required="required" maxlength="11"/>
+									<label for="Telefone" class="labelInput">Telefone</label>
+									<input type="text" name="Telefone" aria-describedby="sizing-addon2" required="required" class="form-control" placeholder="Telefone" id="Telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" />
+									<script type="text/javascript">$("#Telefone").mask("(00) 0000-00009");</script>	
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
 									<label class="labelInput label_cpf_cnpj">CPF / CNPJ:</label>
@@ -770,7 +767,7 @@
 					<div class="col-md-8">
 						<div class="info">
 					      	<p class="text-muted">ENGECALL</p>
-					      	<p class="developers">Desenvolvido por: DO-JO</p>
+					      	<a target="_top" href="mailto:dojofreelancers@gmail.com" class="developers">Desenvolvido por: DO-JO</a>
 					    </div>
 					</div>
 				  <div class="col-md-4">
