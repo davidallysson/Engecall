@@ -64,6 +64,15 @@
 			.navbar-default .navbar-toggle:hover .navbar-default .navbar-toggle:focus{
 				border-color: transparent;
 			}
+			.label-orcamento{
+				position: absolute;
+				padding-top: 6px;
+				padding-left: 7px;
+			}
+			.panel-title{
+				font-family: ethnocentric;
+				color: #1F5C1F;
+			}
 		</style>
 </head>
 <body>
@@ -117,7 +126,7 @@
 							<p class="list-group-item active">
 							Serviços de Engenharia
 							</p>
-							<a href="servicos.html" class="list-group-item">Inspenção e ensaios de NR13</a>
+							<a href="servicos.html" class="list-group-item">Inspenção e ensaios NR13</a>
 							<a href="servicos.html" class="list-group-item">Teste hidrostático</a>
 							<a href="servicos.html" class="list-group-item">Loop test</a>
 							<a href="servicos.html" class="list-group-item">Comissionamento</a>
@@ -137,7 +146,7 @@
 									<input name="_replyto" type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon2" required="required" maxlength="200"/>
 								</div>
 								<div class="col-md-6 input-group" style="float: left;">
-									<label for="Telefone" class="labelInput">Telefone</label>
+									<label for="Telefone" class="labelInput">Telefone:</label>
 									<input type="text" name="Telefone" aria-describedby="sizing-addon2" required="required" class="form-control" placeholder="Telefone" id="Telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" />
 									<script type="text/javascript">$("#Telefone").mask("(00) 0000-00009");</script>	
 								</div>
@@ -146,19 +155,23 @@
 									<input name="cpf_cnpj" type="text" pattern="[0-9]+$" class="form-control input_cpf_cnpj" placeholder="CPF ou CNPJ (Apenas números)" aria-describedby="sizing-addon2" required="required" maxlength="14"/>
 								</div>
 							</div>
+							<div style="width: 80%; margin: 50px auto; text-aling: center;" class="legend row">
+								<div class="col-sm-9"><p class="labelInput">Serviços</p></div>
+								<div class="col-sm-3"><p class="labelInput" style="text-align: center;">Quantidade</p></div>
+							</div>
 							<div class="row" style="width: 80%; margin: 50px auto;">
 								<div class="panel-group">
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingOne">
 								      <h4 class="panel-title">
-								          Grandeza e Pressão
+								          Grandeza Pressão
 								      </h4>
 								    </div>
 								    <div id="collapseOne" >
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Autoclave" class="inputCheckbox"><label for="">Autoclave</label>
+													<input type="checkbox" value="Autoclave" class="inputCheckbox"><label for="" class="label-orcamento">Autoclave</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Autoclave" class="form-control col-md-1" for="" type="number">
@@ -166,7 +179,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Calibrador de Pneus até 280 libras" class="inputCheckbox"><label for="">Calibrador de Pneus até 280 libras</label>
+													<input type="checkbox" value="Calibrador de Pneus até 280 libras" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador de Pneus até 280 libras</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Calibrador de Pneus até 280 libras" class="form-control col-md-1" for="" type="number">
@@ -174,7 +187,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Calibrador de Pressão Digital até 700 kgf/cm²" class="inputCheckbox"><label for="">Calibrador de Pressão Digital até 700 kgf/cm²</label>
+													<input type="checkbox" value="Calibrador de Pressão Digital até 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador de Pressão Digital até 700 kgf/cm²</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Calibrador de Pressão Digital até 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
@@ -182,7 +195,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Calibrador Digital Pneumático 700 kgf/cm²" class="inputCheckbox"><label for="">Calibrador Digital Pneumático 700 kgf/cm²</label>
+													<input type="checkbox" value="Calibrador Digital Pneumático 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador Digital Pneumático 700 kgf/cm²</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Calibrador Digital Pneumático 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
@@ -190,7 +203,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="inputCheckbox"><label for="">Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</label>
+													<input type="checkbox" value="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
@@ -198,7 +211,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Mano-Vacuômetro Digital" class="inputCheckbox"><label for="">Mano-Vacuômetro Digital</label>
+													<input type="checkbox" value="Mano-Vacuômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Mano-Vacuômetro Digital</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Mano-Vacuômetro Digital" class="form-control col-md-1" for="" type="number">
@@ -206,7 +219,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Manômetro Analógico" class="inputCheckbox"><label for="">Manômetro Analógico</label>
+													<input type="checkbox" value="Manômetro Analógico" class="inputCheckbox"><label for="" class="label-orcamento">Manômetro Analógico</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Manômetro Analógico" class="form-control col-md-1" for="" type="number">
@@ -214,7 +227,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Manômetro Digital" class="inputCheckbox"><label for="">Manômetro Digital</label>
+													<input type="checkbox" value="Manômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Manômetro Digital</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Manômetro Digital" class="form-control col-md-1" for="" type="number">
@@ -222,7 +235,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Pressostato até 700 kgf/cm²" class="inputCheckbox"><label for="">Pressostato até 700 kgf/cm²</label>
+													<input type="checkbox" value="Pressostato até 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Pressostato até 700 kgf/cm²</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Pressostato até 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
@@ -230,7 +243,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Transdutor de Pressão" class="inputCheckbox"><label for="">Transdutor de Pressão</label>
+													<input type="checkbox" value="Transdutor de Pressão" class="inputCheckbox"><label for="" class="label-orcamento">Transdutor de Pressão</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Transdutor de Pressão" class="form-control col-md-1" for="" type="number">
@@ -238,7 +251,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Transmissor de Pressão" class="inputCheckbox"><label for="">Transmissor de Pressão</label>
+													<input type="checkbox" value="Transmissor de Pressão" class="inputCheckbox"><label for="" class="label-orcamento">Transmissor de Pressão</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Transmissor de Pressão" class="form-control col-md-1" for="" type="number">
@@ -246,7 +259,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Vacuômetro Analógico" class="inputCheckbox"><label for="">Vacuômetro Analógico</label>
+													<input type="checkbox" value="Vacuômetro Analógico" class="inputCheckbox"><label for="" class="label-orcamento">Vacuômetro Analógico</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Vacuômetro Analógico" class="form-control col-md-1" for="" type="number">
@@ -254,7 +267,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Vacuômetro Digital" class="inputCheckbox"><label for="">Vacuômetro Digital</label>
+													<input type="checkbox" value="Vacuômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Vacuômetro Digital</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Vacuômetro Digital" class="form-control col-md-1" for="" type="number">
@@ -273,7 +286,7 @@
 								      <div class="panel-body">
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Indicador de Temperatura" class="inputCheckbox"><label for="">Indicador de Temperatura</label>
+													<input type="checkbox" value="Indicador de Temperatura" class="inputCheckbox"><label for="" class="label-orcamento">Indicador de Temperatura</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Indicador de Temperatura" class="form-control col-md-1" for="" type="number">
@@ -281,7 +294,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Pirômetro Ótico Infra-Vermelho" class="inputCheckbox"><label for="">Pirômetro Ótico Infra-Vermelho</label>
+													<input type="checkbox" value="Pirômetro Ótico Infra-Vermelho" class="inputCheckbox"><label for="" class="label-orcamento">Pirômetro Ótico Infra-Vermelho</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Pirômetro Ótico Infra-Vermelho" class="form-control col-md-1" for="" type="number">
@@ -289,7 +302,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Registrador de Temperatura" class="inputCheckbox"><label for="">Registrador de Temperatura</label>
+													<input type="checkbox" value="Registrador de Temperatura" class="inputCheckbox"><label for="" class="label-orcamento">Registrador de Temperatura</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Registrador de Temperatura" class="form-control col-md-1" for="" type="number">
@@ -297,7 +310,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Termômetro Bimetálico" class="inputCheckbox"><label for="">Termômetro Bimetálico</label>
+													<input type="checkbox" value="Termômetro Bimetálico" class="inputCheckbox"><label for="" class="label-orcamento">Termômetro Bimetálico</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Termômetro Bimetálico" class="form-control col-md-1" for="" type="number">
@@ -305,7 +318,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Termômetro Digital" class="inputCheckbox"><label for="">Termômetro Digital</label>
+													<input type="checkbox" value="Termômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Termômetro Digital</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Termômetro Digital" class="form-control col-md-1" for="" type="number">
@@ -313,7 +326,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Termopar" class="inputCheckbox"><label for="">Termopar</label>
+													<input type="checkbox" value="Termopar" class="inputCheckbox"><label for="" class="label-orcamento">Termopar</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Termopar" class="form-control col-md-1" for="" type="number">
@@ -321,7 +334,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Termostato" class="inputCheckbox"><label for="">Termostato</label>
+													<input type="checkbox" value="Termostato" class="inputCheckbox"><label for="" class="label-orcamento">Termostato</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Termostato" class="form-control col-md-1" for="" type="number">
@@ -329,7 +342,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Termoresistência" class="inputCheckbox"><label for="">Termoresistência</label>
+													<input type="checkbox" value="Termoresistência" class="inputCheckbox"><label for="" class="label-orcamento">Termoresistência</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Termoresistência" class="form-control col-md-1" for="" type="number">
@@ -337,7 +350,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Transmissor de Temperatura" class="inputCheckbox"><label for="">Transmissor de Temperatura</label>
+													<input type="checkbox" value="Transmissor de Temperatura" class="inputCheckbox"><label for="" class="label-orcamento">Transmissor de Temperatura</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Transmissor de Temperatura" class="form-control col-md-1" for="" type="number">
@@ -356,7 +369,7 @@
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Balança Digital" class="inputCheckbox"><label for="">Balança Digital</label>
+													<input type="checkbox" value="Balança Digital" class="inputCheckbox"><label for="" class="label-orcamento">Balança Digital</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Balança Digital" class="form-control col-md-1" for="" type="number">
@@ -364,7 +377,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Balança Mecânica" class="inputCheckbox"><label for="">Balança Mecânica</label>
+													<input type="checkbox" value="Balança Mecânica" class="inputCheckbox"><label for="" class="label-orcamento">Balança Mecânica</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Balança Mecânica" class="form-control col-md-1" for="" type="number">
@@ -383,7 +396,7 @@
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Nível" class="inputCheckbox"><label for="">Nível</label>
+													<input type="checkbox" value="Nível" class="inputCheckbox"><label for="" class="label-orcamento">Nível</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Nível" class="form-control col-md-1" for="" type="number">
@@ -391,7 +404,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Paquímetro" class="inputCheckbox"><label for="">Paquímetro</label>
+													<input type="checkbox" value="Paquímetro" class="inputCheckbox"><label for="" class="label-orcamento">Paquímetro</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Paquímetro" class="form-control col-md-1" for="" type="number">
@@ -399,7 +412,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Placa de Orifício" class="inputCheckbox"><label for="">Placa de Orifício</label>
+													<input type="checkbox" value="Placa de Orifício" class="inputCheckbox"><label for="" class="label-orcamento">Placa de Orifício</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Placa de Orifício" class="form-control col-md-1" for="" type="number">
@@ -407,7 +420,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Esquadro (Combinado, em L)" class="inputCheckbox"><label for="">Esquadro (Combinado, em L)</label>
+													<input type="checkbox" value="Esquadro (Combinado, em L)" class="inputCheckbox"><label for="" class="label-orcamento">Esquadro (Combinado, em L)</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Esquadro (Combinado, em L)" class="form-control col-md-1" for="" type="number">
@@ -415,7 +428,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)" class="inputCheckbox"><label for="">Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)</label>
+													<input type="checkbox" value="Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)" class="inputCheckbox"><label for="" class="label-orcamento">Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Trenas (Trena, Profundidade, Tanque, Régua Graduada etc)" class="form-control col-md-1" for="" type="number">
@@ -424,7 +437,7 @@
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Clinômetro até 90º" class="inputCheckbox">
-													<label for="">Clinômetro até 90º</label>
+													<label for="" class="label-orcamento">Clinômetro até 90º</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Clinômetro até 90º" class="form-control col-md-1" for="" type="number">
@@ -432,7 +445,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Esquadro de Aço" class="inputCheckbox"><label for="">Esquadro de Aço</label>
+													<input type="checkbox" value="Esquadro de Aço" class="inputCheckbox"><label for="" class="label-orcamento">Esquadro de Aço</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Esquadro de Aço" class="form-control col-md-1" for="" type="number">
@@ -440,7 +453,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Esquadro Combinado" class="inputCheckbox"><label for="">Esquadro Combinado</label>
+													<input type="checkbox" value="Esquadro Combinado" class="inputCheckbox"><label for="" class="label-orcamento">Esquadro Combinado</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Esquadro Combinado" class="form-control col-md-1" for="" type="number">
@@ -449,7 +462,7 @@
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Fita Perimétrica" class="inputCheckbox">
-													<label for="">Fita Perimétrica</label>
+													<label for="" class="label-orcamento">Fita Perimétrica</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Fita Perimétrica" class="form-control col-md-1" for="" type="number">
@@ -457,7 +470,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Haste Padrão" class="inputCheckbox"><label for="">Haste Padrão</label>
+													<input type="checkbox" value="Haste Padrão" class="inputCheckbox"><label for="" class="label-orcamento">Haste Padrão</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Haste Padrão" class="form-control col-md-1" for="" type="number">
@@ -466,7 +479,7 @@
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Nível de Bolha" class="inputCheckbox">
-													<label for="">Nível de Bolha</label>
+													<label for="" class="label-orcamento">Nível de Bolha</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Nível de Bolha" class="form-control col-md-1" for="" type="number">
@@ -474,7 +487,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Nível de Precisão Linear" class="inputCheckbox"><label for="">Nível de Precisão Linear</label>
+													<input type="checkbox" value="Nível de Precisão Linear" class="inputCheckbox"><label for="" class="label-orcamento">Nível de Precisão Linear</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Nível de Precisão Linear" class="form-control col-md-1" for="" type="number">
@@ -482,7 +495,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Paquímetro" class="inputCheckbox"><label for="">Paquímetro</label>
+													<input type="checkbox" value="Paquímetro" class="inputCheckbox"><label for="" class="label-orcamento">Paquímetro</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Paquímetro" class="form-control col-md-1" for="" type="number">
@@ -490,7 +503,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Paquímetro de Profundidade" class="inputCheckbox"><label for="">Paquímetro de Profundidade</label>
+													<input type="checkbox" value="Paquímetro de Profundidade" class="inputCheckbox"><label for="" class="label-orcamento">Paquímetro de Profundidade</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Paquímetro de Profundidade" class="form-control col-md-1" for="" type="number">
@@ -498,7 +511,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Padrão Escalonado com Tambor Micrométrico" class="inputCheckbox"><label for="">Padrão Escalonado com Tambor Micrométrico</label>
+													<input type="checkbox" value="Padrão Escalonado com Tambor Micrométrico" class="inputCheckbox"><label for="" class="label-orcamento">Padrão Escalonado com Tambor Micrométrico</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Padrão Escalonado com Tambor Micrométrico" class="form-control col-md-1" for="" type="number">
@@ -506,7 +519,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Peneira Granulométrica" class="inputCheckbox"><label for="">Peneira Granulométrica</label>
+													<input type="checkbox" value="Peneira Granulométrica" class="inputCheckbox"><label for="" class="label-orcamento">Peneira Granulométrica</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Peneira Granulométrica" class="form-control col-md-1" for="" type="number">
@@ -515,7 +528,7 @@
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Penetrômetro" class="inputCheckbox">
-													<label for="">Penetrômetro</label>
+													<label for="" class="label-orcamento">Penetrômetro</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Penetrômetro" class="form-control col-md-1" for="" type="number">
@@ -523,7 +536,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Pino Calibrado até 200 mm" class="inputCheckbox"><label for="">Pino Calibrado até 200 mm</label>
+													<input type="checkbox" value="Pino Calibrado até 200 mm" class="inputCheckbox"><label for="" class="label-orcamento">Pino Calibrado até 200 mm</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Pino Calibrado até 200 mm" class="form-control col-md-1" for="" type="number">
@@ -532,7 +545,7 @@
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Prisma até 300 mm" class="inputCheckbox">
-													<label for="">Prisma até 300 mm</label>
+													<label for="" class="label-orcamento">Prisma até 300 mm</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Prisma até 300 mm" class="form-control col-md-1" for="" type="number">
@@ -540,7 +553,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Régua Graduada" class="inputCheckbox"><label for="">Régua Graduada</label>
+													<input type="checkbox" value="Régua Graduada" class="inputCheckbox"><label for="" class="label-orcamento">Régua Graduada</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Régua Graduada" class="form-control col-md-1" for="" type="number">
@@ -548,7 +561,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Transferidor de Graus" class="inputCheckbox"><label for="">Transferidor de Graus (360º)</label>
+													<input type="checkbox" value="Transferidor de Graus" class="inputCheckbox"><label for="" class="label-orcamento">Transferidor de Graus (360º)</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Transferidor de Graus" class="form-control col-md-1" for="" type="number">
@@ -556,7 +569,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Trena" class="inputCheckbox"><label for="">Trena</label>
+													<input type="checkbox" value="Trena" class="inputCheckbox"><label for="" class="label-orcamento">Trena</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Trena" class="form-control col-md-1" for="" type="number">
@@ -575,7 +588,7 @@
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Válvula de Segurança" class="inputCheckbox"><label for="">Válvula de Segurança</label>
+													<input type="checkbox" value="Válvula de Segurança" class="inputCheckbox"><label for="" class="label-orcamento">Válvula de Segurança</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Válvula de Segurança" class="form-control col-md-1" for="" type="number">
@@ -583,7 +596,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Válvula de Alivio" class="inputCheckbox"><label for="">Válvula de Alivio</label>
+													<input type="checkbox" value="Válvula de Alivio" class="inputCheckbox"><label for="" class="label-orcamento">Válvula de Alivio</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Válvula de Alivio" class="form-control col-md-1" for="" type="number">
@@ -591,7 +604,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Pressostato" class="inputCheckbox"><label for="">Pressostato</label>
+													<input type="checkbox" value="Pressostato" class="inputCheckbox"><label for="" class="label-orcamento">Pressostato</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Pressostato" class="form-control col-md-1" for="" type="number">
@@ -599,7 +612,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Termostato" class="inputCheckbox"><label for="">Termostato</label>
+													<input type="checkbox" value="Termostato" class="inputCheckbox"><label for="" class="label-orcamento">Termostato</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Termostato" class="form-control col-md-1" for="" type="number">
@@ -611,14 +624,14 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingSix">
 								      <h4 class="panel-title">
-								        Inspeção de ensaios de NR13
+								        Inspeção e ensaios NR13
 								      </h4>
 								    </div>
 								    <div id="collapseSix">
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Visual Externo" class="inputCheckbox"><label for="">Visual Externo</label>
+													<input type="checkbox" value="Visual Externo" class="inputCheckbox"><label for="" class="label-orcamento">Visual Externo</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Visual Externo" class="form-control col-md-1" for="" type="number">
@@ -626,7 +639,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Visual Interno" class="inputCheckbox"><label for="">Visual Interno</label>
+													<input type="checkbox" value="Visual Interno" class="inputCheckbox"><label for="" class="label-orcamento">Visual Interno</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Visual Interno" class="form-control col-md-1" for="" type="number">
@@ -634,7 +647,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Liquido Penetrante" class="inputCheckbox"><label for="">Liquido Penetrante</label>
+													<input type="checkbox" value="Liquido Penetrante" class="inputCheckbox"><label for="" class="label-orcamento">Liquido Penetrante</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Liquido Penetrante" class="form-control col-md-1" for="" type="number">
@@ -642,7 +655,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Medição de camada de Tinta" class="inputCheckbox"><label for="">Medição de camada de Tinta</label>
+													<input type="checkbox" value="Medição de camada de Tinta" class="inputCheckbox"><label for=""class="label-orcamento">Medição de camada de Tinta</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Medição de camada de Tinta" class="form-control col-md-1" for="" type="number">
@@ -651,7 +664,7 @@
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Medição de Espessura" class="inputCheckbox">
-													<label for="">Medição de Espessura</label>
+													<label for="" class="label-orcamento">Medição de Espessura</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Medição de Espessura" class="form-control col-md-1" for="" type="number">
@@ -659,7 +672,7 @@
 											</div>
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Teste Hidrostatico" class="inputCheckbox"><label for="">Teste Hidrostatico</label>
+													<input type="checkbox" value="Teste Hidrostatico" class="inputCheckbox"><label for="" class="label-orcamento">Teste Hidrostatico</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Teste Hidrostatico" class="form-control col-md-1" for="" type="number">
@@ -678,7 +691,7 @@
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Teste Hidrostático Mangueiras/Mangotes" class="inputCheckbox"><label for="">Teste Hidrostático Mangueiras/Mangotes</label>
+													<input type="checkbox" value="Teste Hidrostático Mangueiras/Mangotes" class="inputCheckbox"><label for="" class="label-orcamento">Teste Hidrostático Mangueiras/Mangotes</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Teste Hidrostático Mangueiras/Mangotes" class="form-control col-md-1" for="" type="number">
@@ -697,7 +710,7 @@
 								      <div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
-													<input type="checkbox" value="Loop Test" class="inputCheckbox"><label for="">Loop Test</label>
+													<input type="checkbox" value="Loop Test" class="inputCheckbox"><label for="" class="label-orcamento">Loop Test</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Loop Test" class="form-control col-md-1" for="" type="number">
@@ -717,7 +730,7 @@
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Comissionamento" class="inputCheckbox">
-													<label for="">Comissionamento</label>
+													<label for="" class="label-orcamento">Comissionamento</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Comissionamento" class="form-control col-md-1" for="" type="number">
@@ -737,7 +750,7 @@
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Laudos Técnicos" class="inputCheckbox">
-													<label for="">Laudos Técnicos</label>
+													<label for="" class="label-orcamento">Laudos Técnicos</label>
 												</div>
 												<div class="col-sm-2">
 													<input name="Laudos Técnicos" class="form-control col-md-1" for="" type="number">
