@@ -70,8 +70,16 @@
 				padding-left: 7px;
 			}
 			.panel-title{
-				font-family: ethnocentric;
+				font-weight: bold;
 				color: #1F5C1F;
+			}
+
+			#infor{
+				text-align: center;
+			    color: #000000;
+			    font-weight: bold;
+			    font-size: 17px;
+			    margin-top: -20px;
 			}
 		</style>
 </head>
@@ -159,131 +167,141 @@
 								<div class="col-sm-9"><p class="labelInput">Serviços</p></div>
 								<div class="col-sm-3"><p class="labelInput" style="text-align: center;">Quantidade</p></div>
 							</div>
+							<p id="infor">Clique nos serviços e veja mais detalhes.</p>
 							<div class="row" style="width: 80%; margin: 50px auto;">
-								<div class="panel-group">
-								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingOne">
-								      <h4 class="panel-title">
-								          Grandeza Pressão
-								      </h4>
+								<div class="panel panel-default" style="margin-top: -30px;">
+							    	<div class="panel-heading" role="tab" id="headingOne">
+							      		<h4 class="panel-title">
+							      			<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaPressao" aria-expanded="false" aria-controls="grandezaPressao">
+									          Grandeza Pressão
+									         </a>
+									     </h4>
 								    </div>
-								    <div id="collapseOne" >
-								      <div class="panel-body">
-								    		<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Autoclave" class="inputCheckbox"><label for="" class="label-orcamento">Autoclave</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Autoclave" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Calibrador de Pneus até 280 libras" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador de Pneus até 280 libras</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Calibrador de Pneus até 280 libras" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Calibrador de Pressão Digital até 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador de Pressão Digital até 700 kgf/cm²</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Calibrador de Pressão Digital até 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Calibrador Digital Pneumático 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador Digital Pneumático 700 kgf/cm²</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Calibrador Digital Pneumático 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Mano-Vacuômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Mano-Vacuômetro Digital</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Mano-Vacuômetro Digital" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Manômetro Analógico" class="inputCheckbox"><label for="" class="label-orcamento">Manômetro Analógico</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Manômetro Analógico" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Manômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Manômetro Digital</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Manômetro Digital" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Pressostato até 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Pressostato até 700 kgf/cm²</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Pressostato até 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Transdutor de Pressão" class="inputCheckbox"><label for="" class="label-orcamento">Transdutor de Pressão</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Transdutor de Pressão" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Transmissor de Pressão" class="inputCheckbox"><label for="" class="label-orcamento">Transmissor de Pressão</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Transmissor de Pressão" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Vacuômetro Analógico" class="inputCheckbox"><label for="" class="label-orcamento">Vacuômetro Analógico</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Vacuômetro Analógico" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-											<div class="input-group col-sm-12">
-							  					<div class="col-sm-10">
-													<input type="checkbox" value="Vacuômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Vacuômetro Digital</label>
-												</div>
-												<div class="col-sm-2">
-													<input name="Vacuômetro Digital" class="form-control col-md-1" for="" type="number">
-												</div>
-											</div>
-								      </div>
+								    <div id="grandezaPressao" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							      		<div class="panel-body">
+							        		<div id="collapseOne" >
+								      			<div class="panel-body">
+										    		<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Autoclave" class="inputCheckbox"><label for="" class="label-orcamento">Autoclave</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Autoclave" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Calibrador de Pneus até 280 libras" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador de Pneus até 280 libras</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Calibrador de Pneus até 280 libras" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Calibrador de Pressão Digital até 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador de Pressão Digital até 700 kgf/cm²</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Calibrador de Pressão Digital até 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Calibrador Digital Pneumático 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Calibrador Digital Pneumático 700 kgf/cm²</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Calibrador Digital Pneumático 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Mano-Vacuômetro -12 kgf/cm² / 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Mano-Vacuômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Mano-Vacuômetro Digital</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Mano-Vacuômetro Digital" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Manômetro Analógico" class="inputCheckbox"><label for="" class="label-orcamento">Manômetro Analógico</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Manômetro Analógico" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Manômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Manômetro Digital</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Manômetro Digital" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Pressostato até 700 kgf/cm²" class="inputCheckbox"><label for="" class="label-orcamento">Pressostato até 700 kgf/cm²</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Pressostato até 700 kgf/cm²" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Transdutor de Pressão" class="inputCheckbox"><label for="" class="label-orcamento">Transdutor de Pressão</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Transdutor de Pressão" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Transmissor de Pressão" class="inputCheckbox"><label for="" class="label-orcamento">Transmissor de Pressão</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Transmissor de Pressão" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Vacuômetro Analógico" class="inputCheckbox"><label for="" class="label-orcamento">Vacuômetro Analógico</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Vacuômetro Analógico" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+													<div class="input-group col-sm-12">
+									  					<div class="col-sm-10">
+															<input type="checkbox" value="Vacuômetro Digital" class="inputCheckbox"><label for="" class="label-orcamento">Vacuômetro Digital</label>
+														</div>
+														<div class="col-sm-2">
+															<input name="Vacuômetro Digital" class="form-control col-md-1" for="" type="number">
+														</div>
+													</div>
+										      </div>
+								  		</div>
 								    </div>
-								  </div>
-								  <div class="panel panel-default">
+								</div>
+
+
+
+								<div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingTwo">
-								      <h4 class="panel-title">
-								        Grandeza Temperatura
-								      </h4>
+							      		<h4 class="panel-title">
+							        		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaTemperatura" aria-expanded="false" aria-controls="grandezaTemperatura">
+								          		Grandeza Temperatura
+								        	</a>
+								      	</h4>
 								    </div>
-								    <div id="collapseTwo">
-								      <div class="panel-body">
+								    <div id="grandezaTemperatura" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							      		<div class="panel-body">
 											<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Indicador de Temperatura" class="inputCheckbox"><label for="" class="label-orcamento">Indicador de Temperatura</label>
@@ -355,18 +373,22 @@
 												<div class="col-sm-2">
 													<input name="Transmissor de Temperatura" class="form-control col-md-1" for="" type="number">
 												</div>
-											</div>
-								      </div>
-								    </div>
-								  </div>
-								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingThree">
-								      <h4 class="panel-title">
-								        Grandeza Massa
-								      </h4>
-								    </div>
-								    <div id="collapseThree">
-								      <div class="panel-body">
+								      		</div>
+								    	</div>
+							    	</div>
+							    </div>
+
+
+								<div class="panel panel-default">
+							   		<div class="panel-heading" role="tab" id="headingThree">
+							      		<h4 class="panel-title">
+									        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaMassa" aria-expanded="false" aria-controls="grandezaMassa">
+									          	Grandeza Massa
+									        </a>
+									    </h4>
+							    	</div>
+							    	<div id="grandezaMassa" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							      		<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Balança Digital" class="inputCheckbox"><label for="" class="label-orcamento">Balança Digital</label>
@@ -383,17 +405,20 @@
 													<input name="Balança Mecânica" class="form-control col-md-1" for="" type="number">
 												</div>
 											</div>
-								      </div>
-								    </div>
-								  </div>
-								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingFour">
-								      <h4 class="panel-title">
-								        Grandeza Dimensional
-								      </h4>
-								    </div>
-								    <div id="collapseFour">
-								      <div class="panel-body">
+								      	</div>
+							    	</div>
+							  	</div>
+
+								<div class="panel panel-default">
+							   		<div class="panel-heading" role="tab" id="headingFour">
+							      		<h4 class="panel-title">
+									        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaDimensional" aria-expanded="false" aria-controls="grandezaDimensional">
+									          	Grandeza Dimensional
+									        </a>
+									    </h4>
+							    	</div>
+								    <div id="grandezaDimensional" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								      	<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Nível" class="inputCheckbox"><label for="" class="label-orcamento">Nível</label>
@@ -575,17 +600,19 @@
 													<input name="Trena" class="form-control col-md-1" for="" type="number">
 												</div>
 											</div>
-								      </div>
+								      	</div>
 								    </div>
 								  </div>
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingFive">
-								      <h4 class="panel-title">
-								        Ensaios
-								      </h4>
-								    </div>
-								    <div id="collapseFive">
-								      <div class="panel-body">
+							      		<h4 class="panel-title">
+									        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#ensaios" aria-expanded="false" aria-controls="ensaios">
+									          	Ensaios
+									        </a>
+									    </h4>
+							    	</div>
+								    <div id="ensaios" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+								      	<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Válvula de Segurança" class="inputCheckbox"><label for="" class="label-orcamento">Válvula de Segurança</label>
@@ -622,13 +649,16 @@
 								    </div>
 								  </div>
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingSix">
-								      <h4 class="panel-title">
-								        Inspeção e ensaios NR13
-								      </h4>
-								    </div>
-								    <div id="collapseSix">
-								      <div class="panel-body">
+								    <div class="panel-heading" role="tab" id="headingNR13">
+							      		<h4 class="panel-title">
+							        		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#nr13" aria-expanded="false" aria-controls="nr13">
+							         			Inspeção e ensaios NR13
+							        		</a>
+							      		</h4>
+
+							    	</div>
+								    <div id="nr13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNR13">
+						      			<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Visual Externo" class="inputCheckbox"><label for="" class="label-orcamento">Visual Externo</label>
@@ -678,17 +708,19 @@
 													<input name="Teste Hidrostatico" class="form-control col-md-1" for="" type="number">
 												</div>
 											</div>
-								      </div>
+								      	</div>
 								    </div>
 								  </div>
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingSeven">
-								      <h4 class="panel-title">
-								        Teste Hidrostático Mangueiras/Mangotes
-								      </h4>
+								    <div class="panel-heading" role="tab" id="headingHidrostático">
+								      	<h4 class="panel-title">
+								        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#testeHidrostatico" aria-expanded="false" aria-controls="testeHidrostatico">
+								          		Teste Hidrostático Mangueiras/Mangotes
+								        	</a>
+								      	</h4>
 								    </div>
-								    <div id="collapseSeven">
-								      <div class="panel-body">
+							    	<div id="testeHidrostatico" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingHidrostático">
+								      	<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Teste Hidrostático Mangueiras/Mangotes" class="inputCheckbox"><label for="" class="label-orcamento">Teste Hidrostático Mangueiras/Mangotes</label>
@@ -697,17 +729,19 @@
 													<input name="Teste Hidrostático Mangueiras/Mangotes" class="form-control col-md-1" for="" type="number">
 												</div>
 											</div>
-								      </div>
+								      	</div>
 								    </div>
 								  </div>
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingEigth">
-								      <h4 class="panel-title">
-								        Loop Test
-								      </h4>
-								    </div>
-								    <div id="collapseEigth">
-								      <div class="panel-body">
+								    <div class="panel-heading" role="tab" id="headingLoop">
+							      		<h4 class="panel-title">
+									        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#loopTest" aria-expanded="false" aria-controls="loopTest">
+									          	Loop Test
+									        </a>
+									    </h4>
+							    	</div>
+							    	<div id="loopTest" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLoop">
+								      	<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Loop Test" class="inputCheckbox"><label for="" class="label-orcamento">Loop Test</label>
@@ -716,17 +750,19 @@
 													<input name="Loop Test" class="form-control col-md-1" for="" type="number">
 												</div>
 											</div>
-								      </div>
+								      	</div>
 								    </div>
 								  </div>
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingNine">
-								      <h4 class="panel-title">
-								        Comissionamento
-								      </h4>
-								    </div>
-								    <div id="collapseNine">
-								      <div class="panel-body">
+								    <div class="panel-heading" role="tab" id="headingComissionamento">
+							      		<h4 class="panel-title">
+									        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#comissionamento" aria-expanded="false" aria-controls="comissionamento">
+									          	Comissionamento
+									        </a>
+									    </h4>
+							    	</div>
+							    	<div id="comissionamento" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingComissionamento">
+								      	<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Comissionamento" class="inputCheckbox">
@@ -736,17 +772,19 @@
 													<input name="Comissionamento" class="form-control col-md-1" for="" type="number">
 												</div>
 											</div>
-								      </div>
+								      	</div>
 								    </div>
 								  </div>
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingTen">
-								      <h4 class="panel-title">
-								        Laudos Técnicos
-								      </h4>
-								    </div>
-								    <div id="collapseTen">
-								      <div class="panel-body">
+								    <div class="panel-heading" role="tab" id="headingLaudos">
+							      		<h4 class="panel-title">
+									        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#laudos" aria-expanded="false" aria-controls="laudos">
+									          	Laudos Técnicos
+									        </a>
+									    </h4>
+							    	</div>
+							    	<div id="laudos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLaudos">
+								     	<div class="panel-body">
 								    		<div class="input-group col-sm-12">
 							  					<div class="col-sm-10">
 													<input type="checkbox" value="Laudos Técnicos" class="inputCheckbox">
