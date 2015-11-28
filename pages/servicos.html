@@ -127,19 +127,19 @@
 							<p class="list-group-item active">
 							Serviços de Calibração
 							</p>
-							<a href="servicos.html" class="list-group-item">Grandeza Pressão</a>
-							<a href="servicos.html" class="list-group-item">Grandeza Temperatura</a>
-							<a href="servicos.html" class="list-group-item">Grandeza Massa</a>
-							<a href="servicos.html" class="list-group-item">Grandeza Dimensional</a>
-							<a href="servicos.html" class="list-group-item">Ensaios</a>
+							<button id="linkPressao" class="list-group-item">Grandeza Pressão</button>
+							<button id="linkTemperatura" class="list-group-item">Grandeza Temperatura</button>
+							<button id="linkMassa" class="list-group-item">Grandeza Massa</button>
+							<button id="linkDimensional" class="list-group-item">Grandeza Dimensional</button>
+							<button id="linkEnsaios" class="list-group-item">Ensaios</button>
 							<p class="list-group-item active">
 							Serviços de Engenharia
 							</p>
-							<a href="servicos.html" class="list-group-item">Inspenção e ensaios NR13</a>
-							<a href="servicos.html" class="list-group-item">Teste hidrostático</a>
-							<a href="servicos.html" class="list-group-item">Loop test</a>
-							<a href="servicos.html" class="list-group-item">Comissionamento</a>
-							<a href="servicos.html" class="list-group-item">Laudos técnicos</a>
+							<button id="linkInspecao" class="list-group-item">Inspenção e ensaios NR13</button>
+							<button id="linkTeste" class="list-group-item">Teste hidrostático</button>
+							<button id="linkLoop" class="list-group-item">Loop test</button>
+							<button id="linkComissionamento" class="list-group-item">Comissionamento</button>
+							<button id="linkLaudos" class="list-group-item">Laudos técnicos</button>
 						</div><!--list-group-->
 			  		</div><!--Fim da div col-md-3-->
 			  		<div class="col-md-9">
@@ -221,14 +221,14 @@
 						    	</div>
 						  	</div>
 						  	<div class="panel panel-default">
-						   		<div class="panel-heading" role="tab" id="headingThree">
+						   		<div class="panel-heading" role="tab" id="headingFour">
 						      		<h4 class="panel-title">
 								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#grandezaDimensional" aria-expanded="false" aria-controls="grandezaDimensional">
 								          	Grandeza Dimensional
 								        </a>
 								    </h4>
 						    	</div>
-						    	<div id="grandezaDimensional" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						    	<div id="grandezaDimensional" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 						      		<div class="panel-body">
 						        		<ul>
 											<li>Nível</li>
@@ -258,14 +258,14 @@
 						    	</div>
 						  	</div>
 						  	<div class="panel panel-default">
-						   		<div class="panel-heading" role="tab" id="headingThree">
+						   		<div class="panel-heading" role="tab" id="headingFive">
 						      		<h4 class="panel-title">
 								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#ensaios" aria-expanded="false" aria-controls="ensaios">
 								          	Ensaios
 								        </a>
 								    </h4>
 						    	</div>
-						    	<div id="ensaios" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						    	<div id="ensaios" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 						      		<div class="panel-body">
 						        		<ul>
 											<li>Válvula de Segurança</li>
@@ -401,3 +401,311 @@
 		</div>
 	</body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		//Efeitos de abrir acordeon e movimentar até a âncora (para acesso externo)
+
+		$(function() {
+			if(location.href.indexOf("grandezaPressao") != -1) {
+				$('#grandezaPressao').collapse('show');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top }, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("grandezaTemperatura") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('show');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 40}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("grandezaMassa") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('show');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 80}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("grandezaDimensional") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('show');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 120}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("ensaios") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('show');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 160}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("nr13") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('show');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 220}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("testeHidrostatico") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('show');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 280}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("loopTest") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('show');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 320}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("comissionamento") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('show');
+	        	$('#laudos').collapse('hide');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 320}, 500);
+			}
+		});
+
+		$(function() {
+			if(location.href.indexOf("laudos") != -1) {
+				$('#grandezaPressao').collapse('hide');
+	        	$('#grandezaTemperatura').collapse('hide');
+	        	$('#grandezaMassa').collapse('hide');
+	        	$('#grandezaDimensional').collapse('hide');
+	        	$('#ensaios').collapse('hide');
+	        	$('#nr13').collapse('hide');
+	        	$('#testeHidrostatico').collapse('hide');
+	        	$('#loopTest').collapse('hide');
+	        	$('#comissionamento').collapse('hide');
+	        	$('#laudos').collapse('show');
+	        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 320}, 500);
+			}
+		});
+
+		//Efeitos de abrir acordeon e movimentar até a âncora (para essa página)
+
+		$("#linkPressao").click(function() {
+    		$('#grandezaPressao').collapse('show');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top}, 500);
+    	});
+
+    	$("#linkTemperatura").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('show');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 40}, 500);
+    	});
+
+    	$("#linkMassa").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('show');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 80}, 500);
+    	});
+
+    	$("#linkDimensional").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('show');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 120}, 500);
+    	});
+
+    	$("#linkEnsaios").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('show');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 160}, 500);
+    	});
+
+    	$("#linkInspecao").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('show');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 220}, 500);
+    	});
+
+    	$("#linkTeste").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('show');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 280}, 500);
+    	});
+
+    	$("#linkLoop").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('show');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 320}, 500);
+    	});
+
+    	$("#linkComissionamento").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('show');
+        	$('#laudos').collapse('hide');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 320}, 500);
+    	});
+
+    	$("#linkLaudos").click(function() {
+    		$('#grandezaPressao').collapse('hide');
+        	$('#grandezaTemperatura').collapse('hide');
+        	$('#grandezaMassa').collapse('hide');
+        	$('#grandezaDimensional').collapse('hide');
+        	$('#ensaios').collapse('hide');
+        	$('#nr13').collapse('hide');
+        	$('#testeHidrostatico').collapse('hide');
+        	$('#loopTest').collapse('hide');
+        	$('#comissionamento').collapse('hide');
+        	$('#laudos').collapse('show');
+        	$('html, body').animate({ scrollTop: $('#headingOne').offset().top + 320}, 500);
+    	});
+	});
+</script>
